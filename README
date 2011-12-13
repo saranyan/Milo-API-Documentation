@@ -2,8 +2,11 @@
 Milo provides a commerce API that lets querying local store inventories for products. Using Milo API, one can easily get information about stores in a location, and 
 whether they stock the products of interest. The API has endpoints that help find detailed information about local stores as well.
 
-This is a Rails implementation of Milo API that also provides ample documentation on how these end points work. This is not meant to replace the Milo API documentation 
+This is an experimental Rails dashboard implementation of Milo API that also provides ample documentation on how these end points work. This is not meant to replace the Milo API documentation 
 at http://www.milo.com/api-docs/endpoints.html, but provide an intuitive way to understand and use this API.
+
+== Link
+Dashboard link - http://miloapi.herokuapp.com
 
 == Others
 Developed by @saranyan.
