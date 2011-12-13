@@ -13,9 +13,22 @@
   <%= stylesheet_link_tag    "application" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
+	<meta property="og:title" content="Milo API Dashboard " />
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="http://miloapi.herokuapp.com" />
+	<meta property="og:image" content="http://www.paypal-labs.com/xbus/img/logo_x.commerce.jpg" />
+	<meta property="og:site_name" content="Milo API Dashboard by Saranyan" />
+	<meta property="fb:admins" content="1044610097" />
 </head>
 <body>
-
+	<div id="fb-root"></div>
+	<script>(function(d, s, id) {
+	  var js, fjs = d.getElementsByTagName(s)[0];
+	  if (d.getElementById(id)) return;
+	  js = d.createElement(s); js.id = id;
+	  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=153818704722810";
+	  fjs.parentNode.insertBefore(js, fjs);
+	}(document, 'script', 'facebook-jssdk'));</script>
 <%= yield %>
 
 </body>

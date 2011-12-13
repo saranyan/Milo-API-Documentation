@@ -4,8 +4,10 @@
 			%h2
 				= "A experimental documentation of Milo API."
 				= " Do you like it? "
-				= link_to "Share this link", "#"
-				= " Have more ideas on how to make this more awesome? Talk to me on Twitter "
+				= render :partial => "tweet"
+			%br/
+			%h2
+				= "Have more ideas on how to make this more awesome? Talk to me on Twitter "
 				= link_to "@saranyan", "http://twitter.com/saranyan", :target => "_blank"
 
 	#content
