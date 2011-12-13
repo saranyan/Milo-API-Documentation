@@ -1,0 +1,29 @@
+<h3> What just went on? </h3>
+<div class="docs-body">
+	<p> The submit button triggered the following web request </p>
+	<div class="code">
+	<%= textilize("<pre>#{url}
+	</pre>").html_safe %>
+	</div>
+	<p> The output response contains the following fields that can be parsed in the way we want. </p>
+	<div class="code">
+	<%= textilize(
+		"<pre>
+		address_id: integer;
+		store_id: text;
+		descriptor: text;
+		street: text;
+		city: text;
+		region: text;
+		country: text;
+		longitude: signed float;
+		latitude: signed float;
+		hours: object;
+		merchant_id: integer;
+		merchant_name: text;
+		</pre>"
+	).html_safe%>	
+	</div>
+	<p> If you look at the results, top ten are shown as a demonstration. To be honest, getting a list of all the stores in an area is kind of meaningless unless it translates to something useful. For instance, you can create a visualization of which stores are open, when? Or we can mash this API with other product specific APIs to provide more information about a store carrying a product. For instance, in a product search, you will notice that a product availability can be queried, which returns a merchant_id as a response. That merchant_id can be fed into the store address end point to get more accurate store information. </p>
+	
+</div>

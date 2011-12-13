@@ -1,0 +1,24 @@
+.span-8.push-1
+	%h3= "Milo Store Address API"
+	.milo_form
+		= form_tag milo_submit_path, :method => 'post', :id => 'miloform', :remote => true do
+			= label_tag 'API_KEY', "API KEY from devportal.x.com"
+			%br/
+			= text_field_tag "api_key", "#{MILO_API_KEY}", :size => 75
+			
+				
+			%br/
+			= label_tag 'zip', "Zip Code"
+			%br/
+			= text_field_tag "zip_code", '', :size => 75
+			%br/
+			= label_tag 'radius', "Radius"
+			%br/
+			= text_field_tag "radius", '', :size => 75
+			%br/
+			%h3= "Optional"
+			= label_tag 'id', "Merchant IDs (Comma separated)"
+			%br/
+			= text_field_tag "merchant_ids", '', :size => 75
+			%br/
+			= submit_tag "Submit"

@@ -1,0 +1,38 @@
+<div class="code">
+<%= textilize('<pre>HTTParty.get https://api.x.com/milo/v3/reviews?key=KEY&product_id=16262&page=1&per_page=2
+</pre>').html_safe %>
+</div>
+<br/>
+<p> The input response can contain the following fields that can be parsed in the way we want. As you can note, location is not allowed. The important attribute is the product_id</p>
+<div class="code">
+<%= textilize(
+	"<pre>
+	product_id: integer;
+	page: integer;
+	per_page: integer;
+	</pre>"
+).html_safe%>	
+</div>
+<p>The pagination fields are optional</p>
+
+<h3> Mashup </h3>
+<p>I have taken the opportunity to show how to mashup the other end points to get meaningful information easily. For instance, if I want to get the reviews for some blackberry products, there is no way I want to take the trouble of finding the product id. It is actually painful. However, I know that I can get the product_id readily for free using the product search API or endpoint. </p>
+<p> The field for product name, does precisely this. It takes the product name and uses it to find a product ID.</p>
+<div class="code">
+	<pre>
+def milo_review_submit
+  if params[:product_id].nil? || params[:product_id].blank?
+    if !params[:product_name].nil? && !params[:product_name].blank?
+       product_response = JSON.parse(HTTParty.get("https://api.x.com/milo/v3/products?key=#{params[:api_key]}&q=#{params[:product_name]}&per_page=10"))
+       product_id = (product_response["products"].first)["product_id"]
+       base_url = "https://api.x.com/milo/v3/reviews?key=#{params[:api_key]}&product_id=#{product_id}&page=0&per_page=1"  
+    end
+  else
+    base_url = "https://api.x.com/milo/v3/reviews?key=#{params[:api_key]}&product_id=#{params[:product_id]}&page=0&per_page=1"
+  end
+  response_raw = HTTParty.get base_url
+  @response = response_raw
+  @url = base_url
+end
+</pre>
+</div>

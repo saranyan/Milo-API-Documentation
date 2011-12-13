@@ -1,0 +1,27 @@
+<div class="code">
+<%= textilize('<pre>HTTParty.get https://api.x.com/milo/v3/products?key=KEY&q=blackberry&zip_code=78759&per_page=2
+</pre>').html_safe %>
+</div>
+<br/>
+<p> The input response can contain the following fields. </p>
+<div class="code">
+<%= textilize(
+	"<pre>
+	location: zip_code, ip_address, latitude and longitude pair;
+	query: text;
+	min_price: positive integer;
+	max_price: positive integer;
+	min_rating: integer [0,5];
+	max_rating: integer[0,5];
+	category_ids: integers comma seperated;
+	merchant_ids: integers comma seperated;
+	on_sale: true or false;
+	on_deal: true or false;
+	
+	sort_by: price, rating, relevance (default);
+	page: integer;
+	per_page: integer;
+	</pre>"
+).html_safe%>	
+</div>
+<p>Except for the query, the other fields are optional.</p>

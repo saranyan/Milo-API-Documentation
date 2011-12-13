@@ -1,0 +1,12 @@
+<div class="code">
+<%= textilize('<pre>HTTParty.get https://api.x.com/milo/v3/store_addresses?key=KEY&zip_code=94040&radius=8.5&merchant_ids=1792
+</pre>').html_safe %>
+</div>
+<br/>
+<p><%= "You can replace the zip_code field by an ip_address field or latitude and longitude pair"%></p>
+<div class = "code">
+<%= textilize('<pre>HTTParty.get https://api.x.com/milo/v3/store_addresses?key=KEY&ip_address=190.120.23.178&radius=8.5</pre>').html_safe %>
+</div>
+<br/>
+<p> As you can see, the merchant_id is an optional field. If that information is known, this query can be more targeted. For instance, you can find all the "Target" stores in a particular area and information about them like the store hours and address. </p>
+<p> But, as a developer I feel that the value of this API lies in the mashup with the product API, which is super valuable. You will see a live example as you browse that particular endpoint. </p>

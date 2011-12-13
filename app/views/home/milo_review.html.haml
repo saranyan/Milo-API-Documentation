@@ -1,0 +1,33 @@
+#main
+	.span-22
+		.head-banner
+			%h2
+				= "A experimental documentation of Milo API."
+				= " Do you like it? "
+				= link_to "Share this link", "#"
+				= " Have more ideas on how to make this more awesome? Talk to me on Twitter "
+				= link_to "@saranyan", "http://twitter.com/saranyan", :target => "_blank"
+
+	#content
+		.span-20
+			.sidebar
+				.span-4	
+					%ul
+						%li
+							%h3= link_to "Milo", root_path, :remote => true
+	
+			/ = render :partial => "setpay/simple_payments"
+			.fields
+				.pull-1
+					#fields
+						= render :partial => "milo_review_form"
+			.fields-doc
+				.push-1
+					#fields-doc
+						= render :partial => "milo_buttons"
+	.span-22
+		.foot-banner
+		.push-1
+			.footer
+				#doc
+					= render :partial => "milo_reviews_search"

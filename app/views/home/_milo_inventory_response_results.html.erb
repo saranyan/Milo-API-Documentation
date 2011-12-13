@@ -1,0 +1,20 @@
+<h3> What just went on? </h3>
+<div class="docs-body">
+	<p> The submit button triggered the following web request </p>
+	<div class="code">
+	<%= textilize("<pre>#{url}
+	</pre>").html_safe %>
+	</div>
+	<p> The output response is different from the other end points. Instead of a JSON object, there is a series of JSON objects that are returned.  </p>
+	<div class="code">
+	<%= textilize(
+		"<pre>
+		merchant => {};
+		location => {};
+		result => {};
+		</pre>"
+	).html_safe%>	
+	</div>
+	<p> A stream of data comes in the above format and the connection is kept open until all the data is delivered. Programmatically, using this information becomes slightly harder than the other cases, where one JSON object or a list in some cases was delivered.</p>
+	<p>If you are using Ruby, you can use the yajl gem to handle the JSON input stream. </p>
+</div>

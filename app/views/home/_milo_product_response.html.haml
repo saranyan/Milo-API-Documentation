@@ -1,0 +1,18 @@
+.span-22.push-1
+	/ %h3= "Results"
+	.milo-button
+		= button_to "Milo Product API", milo_product_path
+	#milo-results
+		- if !(response["products"]).nil?
+			- if response["products"].size > 10
+				%h3= "Top 10 results of #{response["pagination"]["total_results"]}"
+				- response["products"] = response["products"][0..9]
+			
+			- (response["products"]).each do |r|
+				.card-layout
+					.left
+						%p= "#{r["name"].truncate(30)}"
+					.right
+						- if !r["max_price"].nil?
+							%p= "$#{Integer(r["max_price"])/100.00}"
+						%p= "##{r["product_id"]}"
