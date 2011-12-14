@@ -1,5 +1,7 @@
 .span-22.push-1
 	/ %h3= "Results"
+	%h3= "JSON stream dump"
+	%p This shows the JSON dump of the response. Please note that, the JSON response is presented as an output for this end point as an illustration of what really happens behind the scenes. A callback can be written that handles the response stream.
 	.milo-button
 		= button_to "Milo Inventory API", milo_inventory_path
 	#milo-results
