@@ -1,0 +1,16 @@
+.span-22.push-1
+	/ %h3= "Results"
+	.milo-button
+		= button_to "Go back to Milo API", root_path
+	#milo-results
+		- if !response.nil?
+			- if response.size > 10
+				%h3= "Displaying top 10 results out of #{response.size}"
+				- response = response[0..9]
+				
+			- response.each do |r|
+				.card-layout
+					.left
+						%p= "#{r["merchant_name"]}"
+					.right
+						%p= "#{r["street"]}"

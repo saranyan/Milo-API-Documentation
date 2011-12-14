@@ -1,0 +1,15 @@
+.span-22.push-1
+	/ %h3= "Results"
+	.milo-button
+		= button_to "Milo Reviews API", milo_review_path
+	#milo-results
+		- if !response.nil?
+			%h3= "Showing the top review"
+			
+			.review-body
+				.review-stars
+					%p= "#{'*'*Integer(response["reviews"].first["primary_rating"])}"
+				.review-title
+					%p= "#{response["reviews"].first["title"]}"
+				.review-text
+					%p= "#{strip_tags(response["reviews"].first["review_text"])}"

@@ -1,0 +1,45 @@
+<h3> What just went on? </h3>
+<div class="docs-body">
+	<p> The submit button triggered the following web request </p>
+	<div class="code">
+	<%= textilize("<pre>#{url}
+	</pre>").html_safe %>
+	</div>
+	<p> The output response contains the following fields that can be parsed in the way we want. </p>
+	<div class="code">
+	<%= textilize(
+		"<pre>
+		product_id: integer;
+		name: text;
+		image_*: text (urls);
+		image_trimmed: text (url for full size image);
+		average_rating: integer;
+		total_rating_count: integer;
+		product_url: text (url on milo site);
+		merchants: list of integers;
+		min_price,max_price: integer (in pennies);
+		on_sale: true or false;
+		category_tree: dot separated category tree;
+		upc,isbn,asin,ean: text;
+		</pre>"
+	).html_safe%>	
+	</div>
+	<p> Other product attributes are available that provide more product details. </p>
+	<div class="code">
+	<%= textilize(
+		"<pre>
+		attributes {
+		color: { text, text};
+		size: {text, text}; }
+		</pre>"
+	).html_safe%>	
+	</div>
+	<p> If you look at the results, top ten are shown as a demonstration.  </p>
+	<!-- <h3> Bug </h3>
+		<p> I found a bug in Milo's API during this phase. In the response, the merchant fields does not return links to valid logo urls. </p>
+		
+		<div class="code">
+			{"merchants"=>[12810], "min_price"=>1178, "name"=>"Obama’s Blackberry", "max_price"=>1399, "product_id"=>1020693}], "merchants"=>[{"merchant_logo_url"=>"http://static.milo.com/20110819112000/images/store_icons/flat_by_id/default_icon.png", "merchant_id"=>1779, "merchant_name"=>"Best Buy"}, {"merchant_logo_url"=>"http://static.milo.com/20110819112000/images/store_icons/flat_by_id/default_icon.png", "merchant_id"=>12810, "merchant_name"=>"Barnes & Noble"}, {"merchant_logo_url"=>"http://static.milo.com/20110819112000/images/store_icons/flat_by_id/default_icon.png", "merchant_id"=>3713, "merchant_name"=>"Micro Center"}
+			</div>
+			<p> If you look at the logo URL links above, they all point to the same non-existent image. </p> -->
+</div>

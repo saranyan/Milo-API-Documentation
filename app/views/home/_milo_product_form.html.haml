@@ -1,0 +1,55 @@
+.span-8.push-1
+	%h3= "Milo Product API"
+	.milo_form
+		= form_tag milo_product_submit_path, :method => 'post', :id => 'miloproductform', :remote => true do
+			= label_tag 'API_KEY', "API KEY from devportal.x.com"
+			%br/
+			= text_field_tag "api_key", "#{MILO_API_KEY}", :size => 75
+			
+			%br/
+			= label_tag 'query', "Product name eg., Blackberry Playbook"
+			%br/
+			= text_field_tag "query", '', :size => 75	
+			%br/
+			%h3= "Optional Fields"
+			= label_tag 'zip', "Zip Code"
+			%br/
+			= text_field_tag "zip_code", '', :size => 75
+			%br/
+			= label_tag 'zip', "Radius"
+			%br/
+			= text_field_tag "radius", '10', :size => 75
+			%br/
+			= label_tag 'minprice', "Min Price (in cents) i.e., $33.95 = 3395"
+			%br/
+			= text_field_tag "min_price", '', :size => 75
+			%br/
+			= label_tag 'maxprice', "Max Price (in cents) i.e., $100.00 = 10000"
+			%br/
+			= text_field_tag "max_price", '', :size => 75
+			%br/
+			= label_tag 'minrating', "Min Rating (0..5) i.e., 2"
+			%br/
+			= text_field_tag "min_rating", '', :size => 75
+			%br/
+			= label_tag 'maxrating', "Max Rating (0..5) i.e., 5"
+			%br/
+			= text_field_tag "max_rating", '', :size => 75
+			%br/
+			= label_tag 'categoryids', "Comma separated category IDs i.e., 1,2,100"
+			%br/
+			= text_field_tag "category_ids", '', :size => 75
+			%br/
+			= label_tag 'merchantids', "Comma separated Merchant IDs i.e., 1,2,100"
+			%br/
+			= text_field_tag "merchant_ids", '', :size => 75
+			%br/
+			= label_tag 'onsale', "Is the Item On Sale? i.e., true"
+			%br/
+			= text_field_tag "on_sale", '', :size => 75
+			%br/
+			= label_tag 'isdeal', "Is the Item a Deal? i.e., true"
+			%br/
+			= text_field_tag "is_deal", '', :size => 75
+			%br/
+			= submit_tag "Submit"

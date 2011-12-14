@@ -1,0 +1,11 @@
+<div class="code">
+<%= textilize('<pre>HTTParty.get http://api.x.com/milo/v3/availability?key=KEY&product_id=9418020&zip_code=78759
+</pre>').html_safe %>
+</div>
+<br/>
+<p><%= "You can replace the zip_code field by an ip_address field or latitude and longitude pair"%></p>
+<div class = "code">
+<%= textilize('<pre>HTTParty.get https://api.x.com/milo/v3/availability?key=KEY&ip_address=190.120.23.178&radius=8.5</pre>').html_safe %>
+</div>
+<br/>
+<p> This endpoint lets you specify an optional call_back, which gets routed to your controller action, and can be used to process the results. </p>

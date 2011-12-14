@@ -1,0 +1,3 @@
+$("#fields").html("<%= escape_javascript(render :partial => "milo_review_form")%>")
+$("#fields-doc").html("<%= escape_javascript(render :partial => "milo_buttons")%>")
+$("#doc").html("<%= escape_javascript(render :partial => "milo_reviews_search", :locals => {:url => @url})%>")

@@ -1,0 +1,249 @@
+// Place all the styles related to the Home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+// Place all the styles related to the Home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+#main {
+	width: 700px;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: left;
+	
+}
+.sidebar {
+	ul {
+		li {
+			
+			a {
+				
+				text-decoration: none;
+				color: #226ba9;;
+				
+			}
+		}
+	}
+}
+
+.head-banner {
+	width: 100%;
+	background: #aaa;
+	margin-top: 25px;
+	//background-image:url('blue.png');
+	//background-repeat:repeat; 
+	//background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAJklEQVQYGWP8EGqQxkAEYPz//z9BZR/DDNOYCKqCKhiZChmJDXAAAJgIo9yobPgAAAAASUVORK5CYII=);
+	padding: 0px;
+	padding-top: 0px;
+	padding-bottom: 4px;
+	padding-left: 25px;
+	/*margin-left: 125px;*/
+	margin-bottom: 50px;
+	margin-left: auto;
+	margin-right:auto;
+	clear:both;
+	h2 {
+		display: inline;
+		color: #fff;
+		font-size: 16px;
+		line-height: 25px;
+		a {
+			color: black;
+		}
+	}
+	h3 {
+		color: #fff;
+	}
+	img {
+		float: right;
+		display: inline;
+	}
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+}
+
+.foot-banner {
+	width: 90%;
+	background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAJklEQVQYGWP8EGqQxkAEYPz//z9BZR/DDNOYCKqCKhiZChmJDXAAAJgIo9yobPgAAAAASUVORK5CYII=);
+	
+	padding: 25px;
+	padding-top: 1px;
+	padding-bottom: 1px;
+	/*margin-left: 125px;*/
+	margin-bottom: 10px;
+	margin-left: auto;
+	margin-right:auto;
+	clear:both;
+}
+
+ul {
+	list-style : none;
+	
+	li {
+		list-style: none;
+		display: block;
+		a {
+			color: orange;
+		}
+	}
+}
+
+.desc {
+	h3 {
+		display: block;
+	}
+	a {
+		display: inline;
+	}
+}
+
+.sidebar {
+	float: left;
+	
+}
+
+.fields {
+	
+}
+
+.fields-doc {
+	
+}
+
+.card-layout {
+	width: 20%;
+	float:left;
+	margin-right: 25px;
+	margin-bottom: 25px;
+	border: 1px solid #000;
+	.left {
+		float:left;
+		width: 50%;
+		height: 100px;
+		display: inline;
+		background: #fff;
+		color: #000;
+		p {
+			display: inline;
+		}		
+	}
+	.right {
+		float:left;
+		
+		width:50%;
+		height: 100px;
+		display: inline;
+		background: #aaf53d;
+		color: #000;
+		p {
+			display: inline;
+			margin-left: 2px;
+			font-size: 10px;
+		}
+	}
+}
+#milo-results {
+	img {
+		clear:both;
+		display:block;
+	}
+	.code {
+		width: 100%;
+		padding-left: 10px;
+		float:left;
+		background: #000;
+		color: #fff;
+	}
+	.review-body {
+		width: 75%;
+		background: #efefef;
+		padding:15px;
+		.review-stars {
+
+			p {
+				display: inline;
+				float:right;
+				font-size: 32px;
+				line-height: 10px;
+				font-weight: bold;
+				color: red;
+			}
+		}
+		.review-title {
+			
+			font-size: 20px;
+			font-weight:bold;
+		}
+		.review-text {
+			font-size: 14px;
+		}
+		-moz-border-radius: 5px;
+		-webkit-border-radius: 5px;
+	}
+}
+
+.milo-form {
+	padding-left: 25px;
+}
+.milo-button {
+	margin-bottom: 25px;
+	input[type=submit] {
+		width: 200px;
+		padding: 9px 15px;
+		background: #f08021;
+		background: #a20909;
+		border: 0;
+		font-size: 14px;
+		color: #FFFFFF;
+		-moz-border-radius: 5px;
+		-webkit-border-radius: 5px;
+		}
+}
+
+
+#doc {
+	ul {
+		li {
+			margin-bottom: 10px;
+		}
+	}
+	.api-docs{
+		a {
+			width: auto;
+			padding: 9px 15px;
+			background: #617798;
+			background: #f58a32;
+			text-decoration: none;
+			border: 0;
+			font-size: 14px;
+			color: #FFFFFF;
+			-moz-border-radius: 5px;
+			-webkit-border-radius: 5px;
+			margin-right: 10px;
+		}
+	}
+	
+}
+
+.footer {
+	#doc {
+		img {
+			width: 50%;
+		}
+	.docs-title {
+		
+		h3 {
+		
+		}
+	}
+	.docs-body {
+		.code {
+			width: 100%;
+			padding-left: 10px;
+			float:left;
+			background: #000;
+			color: #fff;
+		}
+	}
+  }
+}

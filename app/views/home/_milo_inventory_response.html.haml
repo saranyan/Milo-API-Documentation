@@ -1,0 +1,6 @@
+.span-22.push-1
+	/ %h3= "Results"
+	.milo-button
+		= button_to "Milo Inventory API", milo_inventory_path
+	#milo-results
+		= render :partial => "inventory_json_output", :locals => {:response => response}

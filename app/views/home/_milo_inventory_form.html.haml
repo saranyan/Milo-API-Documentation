@@ -1,0 +1,23 @@
+.span-8.push-1
+	%h3= "Milo Inventory API"
+	.milo_form
+		= form_tag milo_inventory_submit_path, :method => 'post', :id => 'miloform', :remote => true do
+			= label_tag 'API_KEY', "API KEY from devportal.x.com"
+			%br/
+			= text_field_tag "api_key", "#{MILO_API_KEY}", :size => 75
+			%br/
+			= label_tag 'zip', "Zip Code"
+			%br/
+			= text_field_tag "zip_code", '', :size => 75
+			%br/
+			= label_tag 'productid', "Product ID"
+			%br/
+			= text_field_tag "product_id", '', :size => 75
+			%br/
+			= label_tag 'product_helper',"Don't know a valid product ID? Use this helper.(Not part of API call)"
+			%br/
+			= label_tag 'product_name', "Product name"
+			%br/
+			= text_field_tag "product_name", '', :size => 75
+			%br/
+			= submit_tag "Submit"

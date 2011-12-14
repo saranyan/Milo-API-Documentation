@@ -1,0 +1,38 @@
+<h3> What just went on? </h3>
+<div class="docs-body">
+	<p> The submit button triggered the following web request </p>
+	<div class="code">
+	<%= textilize("<pre>#{url}
+	</pre>").html_safe %>
+	</div>
+	<p> The output response contains the following fields that can be parsed in the way we want. </p>
+	<div class="code">
+	<%= textilize(
+		"<pre>
+		primary-rating: integer;
+		product_id: integer;
+		title: text;
+		review_text: html text;
+		found_helpful_positive: integer;
+		reviewer_location: text;
+		reviewer_name: text;
+		id:integer;
+		</pre>"
+	).html_safe%>	
+	</div>
+	<p> Other review stats are available too. </p>
+	<div class="code">
+	<%= textilize(
+		"<pre>
+		ratings {
+			5.0: integer;
+			4.0: integer;
+			3.0: integer;
+			2.0: integer;
+			1.0: integer;
+		}
+		</pre>"
+	).html_safe%>	
+	</div>
+	<p> If you look at the results, top review is shown as a demonstration.  </p>
+</div>

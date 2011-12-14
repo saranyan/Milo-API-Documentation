@@ -1,0 +1,2 @@
+$("#content").html("<%= escape_javascript(render :partial => "milo_response", :locals => {:response => @response})%>")
+$("#doc").html("<%= escape_javascript(render :partial => "milo_store_response_results", :locals => {:url => @url})%>")

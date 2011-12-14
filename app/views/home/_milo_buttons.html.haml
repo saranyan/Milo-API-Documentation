@@ -1,0 +1,10 @@
+.span-8
+	%h3= "Other API End Points"
+	.milo-button
+		= button_to "Store Address API", milo_path
+	.milo-button
+		= button_to "Products API", milo_product_path, :remote => true
+	.milo-button
+		= button_to "Reviews API", milo_review_path, :remote => true
+	.milo-button
+		= button_to "Inventory API", milo_inventory_path, :remote => true
