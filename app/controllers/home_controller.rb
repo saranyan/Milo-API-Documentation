@@ -7,7 +7,10 @@ class HomeController < ApplicationController
     url = "https://api.x.com/milo/v3/store_addresses?key=#{params[:api_key]}&zip_code=#{params[:zip_code]}"
     if params[:radius].nil? || params[:radius].blank?
       url += "&radius=10"
+    else
+      url += "&radius=#{params[:radius]}"
     end
+    
     if !params[:merchant_ids].nil? && !params[:merchant_ids].blank?
       url += "&merchant_ids=#{params[:merchant_ids]}"
     end
